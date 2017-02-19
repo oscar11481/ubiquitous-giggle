@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 打開延遲加載的開關 -->
+		<setting name="lazyLoadingEnabled" value="true" />
+		<!-- 將積極加載改為消極加載，即延遲加載 -->
+		<setting name="aggressiveLazyLoading" value="false" />
+	</settings>
+	<!-- 別名 -->
+	<typeAliases>
+		<package name="efia.test0112.entity" />
+	</typeAliases>
+</configuration>

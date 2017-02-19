@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="efia.test0112.dao.StudentDao">
+
+	<resultMap type="Student" id="StudentResult">
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="age" column="AGE" />
+	</resultMap>
+
+	<insert id="addStudent" parameterType="Student">
+		insert into
+		TSTUDENT0112(NAME,AGE)
+		values(#{name},#{age});
+	</insert>
+
+	<delete id="deleteStudent" parameterType="int">
+		delete from TSTUDENT0112 where ID=#{id};
+	</delete>
+
+	<update id="updateStudent" parameterType="Student">
+		update TSTUDENT0112 set
+		NAME = #{name}, AGE = #{age}
+		where ID = #{id};
+	</update>
+	
+	<select id="getStudentById" parameterType="int" resultMap="StudentResult">
+		select * from TSTUDENT0112 where ID = #{id};
+	</select>
+
+	<select id="listStudent" resultMap="StudentResult">
+		select * from TSTUDENT0112;
+	</select>
+
+</mapper> 
