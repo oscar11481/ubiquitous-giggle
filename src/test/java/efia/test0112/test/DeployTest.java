@@ -42,10 +42,15 @@ public class DeployTest {
     @Autowired
     private ManagementService managementService;
 
+    
+    @Test
+    public void test(){
+        System.out.println("Hello");
+    }
     /**
      * 創建表測試
      */
-    @Test
+/*    @Test
     public void test01CreateTable() {
         // 獲取流程引擎配置
         ProcessEngineConfiguration pec = ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration();
@@ -53,18 +58,18 @@ public class DeployTest {
         pec.setJdbcUrl("jdbc:mariadb://localhost:3306/db_demo0112");
         pec.setJdbcUsername("root");
         pec.setJdbcPassword("admin1234");
-        /**
+        *//**
          * 配置模式 true 自動創建和更新表
-         */
+         *//*
         pec.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
         // 獲取流程引擎對象
         ProcessEngine pe = pec.buildProcessEngine();
-    }
+    }*/
 
     /**
      * 部署測試
      */
-    @Test
+/*    @Test
     public void test01deployTest() {
         Deployment deployment = repositoryService.createDeployment() // 創建部屬
                 .addClasspathResource("diagrams/SPMProcess.bpmn") // 加載資源文件
@@ -72,12 +77,12 @@ public class DeployTest {
                 .name("簡易進館系統流程").deploy(); // 部屬
         System.out.println("流程部屬ID:" + deployment.getId());
         System.out.println("流程部屬Name:" + deployment.getName());
-    }
+    }*/
 
     /**
      * 啟動任務
      */
-    @Test
+/*    @Test
     public void test02startProcess(){
         String key = "Student";
         Map<String,Object> variables = new HashMap<String,Object>();
@@ -85,12 +90,12 @@ public class DeployTest {
         ProcessInstance pi = runtimeService.startProcessInstanceByKey(key,variables);
         System.out.println("流程實例ID:" + pi.getId());
         System.out.println("流程定義ID:" + pi.getProcessDefinitionId());
-    }
+    }*/
     
     /**
      * 查找任務測試
      */
-    @Test
+/*    @Test
     public void test02findTask() {
 
         List<Task> taskList = taskService // 任务相关Service
@@ -110,14 +115,14 @@ public class DeployTest {
             System.out.println("任务委派人:" + task.getAssignee());
             System.out.println("流程实例ID:" + task.getProcessInstanceId());
         }
-    }
+    }*/
 
     /**
      * 完成任務測試
      */
-    @Test
+/*    @Test
     public void test03completeTask() {
-        taskService.complete("7505");
-    }
+        taskService.complete("27509");
+    }*/
 
 }

@@ -23,14 +23,14 @@ public class StudentTest {
     @Autowired
     private StudentService studentService;
 
-    @Test
+/*    @Test
     public void test01addStudent() {
         Student student = new Student("test", 18);
         int row = studentService.addStudent(student);
         System.out.println("row = " + row);
-    }
+    }*/
 
-    @Test
+/*    @Test
     public void test02addStudents() {
         Student student = new Student("john", 15);
         int row = studentService.addStudent(student);
@@ -39,17 +39,10 @@ public class StudentTest {
         student = new Student("tom", 17);
         row += studentService.addStudent(student);
         System.out.println("row = " + row);
-    }
+    }*/
 
     @Test
-    public void test03deleteStudent() {
-        int id = 1;
-        int row = studentService.deleteStudent(id);
-        System.out.println("row = " + row);
-    }
-
-    @Test
-    public void test04updateStudent() {
+    public void test03updateStudent() {
         int id = 1;
         Student student = studentService.getStudentById(id);
         student.setName("mary");
@@ -57,9 +50,9 @@ public class StudentTest {
         int row = studentService.updateStudent(student);
         System.out.println("row = " + row);
     }
-
+    
     @Test
-    public void test05getStudentById() {
+    public void test04getStudentById() {
         int id = 1;
         Student student = studentService.getStudentById(id);
         System.out.println(student);
@@ -73,4 +66,10 @@ public class StudentTest {
         }
     }
 
+/*    @Test
+    public void test04deleteStudent() {
+        int id = 1;
+        int row = studentService.deleteStudent(id);
+        System.out.println("row = " + row);
+    }*/
 }

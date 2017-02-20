@@ -1,0 +1,8 @@
+efia\test0112\service\impl\StudentServiceImpl.class
+efia\test0112\dao\StudentDao.class
+efia\test0112\service\impl\WorkflowServiceImpl.class
+efia\test0112\web\form\StudentForm.class
+efia\test0112\web\controller\TEST0112F1Controller.class
+efia\test0112\service\StudentService.class
+efia\test0112\entity\Student.class
+efia\test0112\service\WorkflowService.class
