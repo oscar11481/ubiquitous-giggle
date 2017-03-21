@@ -18,7 +18,7 @@ import org.dom4j.DocumentException;
 import org.dom4j.Node;
 
 public class XMLTest {
-
+ 
     private File file;
     private SAXReader reader;
     private Document document;
