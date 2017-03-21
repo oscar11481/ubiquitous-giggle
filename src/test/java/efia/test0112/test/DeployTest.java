@@ -45,7 +45,7 @@ public class DeployTest {
     
     @Test
     public void test(){
-        System.out.println("Hello");
+        System.out.println("Hello ");
     }
     /**
      * 創建表測試
