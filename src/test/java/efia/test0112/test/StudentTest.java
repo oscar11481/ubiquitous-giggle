@@ -23,53 +23,59 @@ public class StudentTest {
     @Autowired
     private StudentService studentService;
 
-/*    @Test
-    public void test01addStudent() {
-        Student student = new Student("test", 18);
-        int row = studentService.addStudent(student);
-        System.out.println("row = " + row);
-    }*/
-
-/*    @Test
-    public void test02addStudents() {
-        Student student = new Student("john", 15);
-        int row = studentService.addStudent(student);
-        student = new Student("mary", 18);
-        row += studentService.addStudent(student);
-        student = new Student("tom", 17);
-        row += studentService.addStudent(student);
-        System.out.println("row = " + row);
-    }*/
-
     @Test
-    public void test03updateStudent() {
-        int id = 1;
-        Student student = studentService.getStudentById(id);
-        student.setName("mary");
-        student.setAge(18);
-        int row = studentService.updateStudent(student);
-        System.out.println("row = " + row);
+    public void test01test() {
+        System.out.println("test");
     }
     
-    @Test
-    public void test04getStudentById() {
-        int id = 1;
-        Student student = studentService.getStudentById(id);
-        System.out.println(student);
-    }
+//    @Test
+//    public void test01addStudent() {
+//        Student student = new Student("test", 18);
+//        int row = studentService.addStudent(student);
+//        System.out.println("row = " + row);
+//    }
+//
+//    @Test
+//    public void test02addStudents() {
+//        Student student = new Student("john", 15);
+//        int row = studentService.addStudent(student);
+//        student = new Student("mary", 18);
+//        row += studentService.addStudent(student);
+//        student = new Student("tom", 17);
+//        row += studentService.addStudent(student);
+//        System.out.println("row = " + row);
+//    }
+//
+//    @Test
+//    public void test03deleteStudent() {
+//        int id = 1;
+//        int row = studentService.deleteStudent(id);
+//        System.out.println("row = " + row);
+//    }
+//
+//    @Test
+//    public void test04updateStudent() {
+//        int id = 1;
+//        Student student = studentService.getStudentById(id);
+//        student.setName("mary");
+//        student.setAge(18);
+//        int row = studentService.updateStudent(student);
+//        System.out.println("row = " + row);
+//    }
+//
+//    @Test
+//    public void test05getStudentById() {
+//        int id = 1;
+//        Student student = studentService.getStudentById(id);
+//        System.out.println(student);
+//    }
+//
+//    @Test
+//    public void test06listStudent() {
+//        List<Student> students = studentService.listStudent();
+//        for (Student student:students) {
+//            System.out.println(student);
+//        }
+//    }
 
-    @Test
-    public void test06listStudent() {
-        List<Student> students = studentService.listStudent();
-        for (Student student:students) {
-            System.out.println(student);
-        }
-    }
-
-/*    @Test
-    public void test04deleteStudent() {
-        int id = 1;
-        int row = studentService.deleteStudent(id);
-        System.out.println("row = " + row);
-    }*/
 }

@@ -15,4 +15,6 @@ public interface StudentService {
     Student getStudentById(int id);
 
     List<Student> listStudent();
+    
+    void syncQizTable();
 }

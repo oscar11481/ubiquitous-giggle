@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -10,7 +11,10 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/task
+        http://www.springframework.org/schema/task/spring-task.xsd
+        ">
 
 	<!-- 自動掃描service、dao組件 -->
 	<context:component-scan base-package="efia.test0112.service" />
@@ -49,6 +53,11 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
+	<!-- spring task 每天凌晨1點及下午1點 sync QIZT001-006 -->
+	<task:scheduled-tasks>
+		<task:scheduled ref="studentService" method="syncQizTable" cron="0 8 1,22 * * ?"/>
+	</task:scheduled-tasks>
+	
 	<!-- 配置事務通知 -->
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>

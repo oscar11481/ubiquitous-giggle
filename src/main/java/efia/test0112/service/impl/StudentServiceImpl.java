@@ -40,4 +40,7 @@ public class StudentServiceImpl implements StudentService {
         return studentDao.listStudent();
     }
 
+    public void syncQizTable() {
+        System.out.println("123");
+    }
 }
